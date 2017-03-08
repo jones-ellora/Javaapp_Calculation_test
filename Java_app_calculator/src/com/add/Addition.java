@@ -18,6 +18,7 @@ public class Addition {
 	private JLabel lblAnswer;
 	private JTextField anserf;
 	private JButton btnSub;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -85,7 +86,7 @@ public class Addition {
 			}
 			}
 		});
-		btnAdd.setBounds(88, 166, 115, 23);
+		btnAdd.setBounds(35, 166, 115, 23);
 		frame.getContentPane().add(btnAdd);
 		
 		lblAnswer = new JLabel("Answer..");
@@ -105,7 +106,7 @@ public class Addition {
 				try{
 					num1=Integer.parseInt(num1f.getText());
 					num2=Integer.parseInt(num2f.getText());
-					ans=num1-num2;
+					ans=num1+num2;
 					anserf.setText(Integer.toString(ans));
 					
 				}catch(Exception ex){
@@ -113,7 +114,26 @@ public class Addition {
 				}
 			}
 		});
-		btnSub.setBounds(240, 166, 115, 23);
+		btnSub.setBounds(160, 166, 115, 23);
 		frame.getContentPane().add(btnSub);
+		
+		btnNewButton = new JButton("MULTIPLICATION");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int num1,num2,ans;	
+				
+				try{
+					num1=Integer.parseInt(num1f.getText());
+					num2=Integer.parseInt(num2f.getText());
+					ans=num1*num2;
+					anserf.setText(Integer.toString(ans));
+					
+				}catch(Exception ex){
+					JOptionPane.showMessageDialog(null, "Enter valid numbers..");
+				}
+			}
+		});
+		btnNewButton.setBounds(285, 166, 139, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 }

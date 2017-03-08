@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Java_app_calculator</groupId>
   <artifactId>Java_app_calculator</artifactId>
-  <version>0.2_ADDITION and SUBTRACTION</version>
+  <version>0.3_ADDITION and SUBTRACTION and MULTIPLICATION</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
