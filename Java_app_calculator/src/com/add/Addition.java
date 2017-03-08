@@ -17,6 +17,7 @@ public class Addition {
 	private JTextField num2f;
 	private JLabel lblAnswer;
 	private JTextField anserf;
+	private JButton btnSub;
 
 	/**
 	 * Launch the application.
@@ -84,7 +85,7 @@ public class Addition {
 			}
 			}
 		});
-		btnAdd.setBounds(195, 166, 89, 23);
+		btnAdd.setBounds(88, 166, 115, 23);
 		frame.getContentPane().add(btnAdd);
 		
 		lblAnswer = new JLabel("Answer..");
@@ -95,5 +96,24 @@ public class Addition {
 		anserf.setBounds(195, 216, 86, 20);
 		frame.getContentPane().add(anserf);
 		anserf.setColumns(10);
+		
+		btnSub = new JButton("SUBTRACTION");
+		btnSub.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int num1,num2,ans;	
+				
+				try{
+					num1=Integer.parseInt(num1f.getText());
+					num2=Integer.parseInt(num2f.getText());
+					ans=num1-num2;
+					anserf.setText(Integer.toString(ans));
+					
+				}catch(Exception ex){
+					JOptionPane.showMessageDialog(null, "Enter valid numbers..");
+				}
+			}
+		});
+		btnSub.setBounds(240, 166, 115, 23);
+		frame.getContentPane().add(btnSub);
 	}
 }
