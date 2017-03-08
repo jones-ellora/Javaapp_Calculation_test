@@ -87,7 +87,7 @@ public class Addition {
 		btnAdd.setBounds(195, 166, 89, 23);
 		frame.getContentPane().add(btnAdd);
 		
-		lblAnswer = new JLabel("Answer");
+		lblAnswer = new JLabel("Answer..");
 		lblAnswer.setBounds(55, 219, 60, 14);
 		frame.getContentPane().add(lblAnswer);
 		
